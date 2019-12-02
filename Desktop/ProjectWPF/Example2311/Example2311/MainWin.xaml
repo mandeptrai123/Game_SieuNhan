@@ -1,0 +1,102 @@
+﻿<Window x:Class="Example2311.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+       xmlns:uc="clr-namespace:Example2311"
+        x:Name="Background"
+        Title="MainWindow" Height="600" Width="1400">
+
+    <Grid>
+        <Grid x:Name="bg_spider">
+            <Image Stretch="Fill" Source="img/spiderman_background.jpg"/>
+        </Grid>
+
+        <Grid x:Name="bg_batman">
+            <Image Stretch="Fill" Source="img/batman_background.jpg"/>
+        </Grid>
+
+        <Grid x:Name="bg_super">
+            <Image Stretch="Fill" Source="img/superman_background.jpg"/>
+        </Grid>
+
+        <Grid x:Name="bg_iron">
+            <Image Stretch="Fill" Source="img/ironman_background.jpg"/>
+        </Grid>
+        
+        
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <!-- Slide Chọn-->
+            
+            <StackPanel Orientation= "Vertical" Grid.Column="0" Grid.RowSpan="4">
+                <Button Click="But_Spider" Margin="10 50 10 0" Height="56" >
+                    <Button.Content>
+                        <TextBlock 
+                        FontSize="20"
+                        Text="Spider Man" FontStyle="Oblique"/>
+                    </Button.Content>
+                </Button>
+                <Button   Click="But_Bat" Margin="10 50 10 0" Height="56" >
+
+                    <Button.Content>
+                        <TextBlock Text="Bat Man" 
+                                FontSize="20"
+                               FontStyle="Oblique"/>
+                    </Button.Content>
+
+                </Button>
+                <Button   Click="But_Super" Margin="10 50 10 0" Height="56">
+                    <Button.Content>
+                        <TextBlock Text="Super Man" 
+                                FontSize="20"
+                               FontStyle="Oblique"/>
+                    </Button.Content>
+                </Button>
+                <Button  Click="But_Iron" Margin="10 50 10 0" Height="56">
+
+                    <Button.Content>
+                        <TextBlock Text="Iron Man" 
+                                FontSize="20"
+                               FontStyle="Oblique"/>
+                    </Button.Content>
+
+                </Button>
+            </StackPanel>
+
+            <!-- Bảng Chức Năng -->
+            <StackPanel 
+            Orientation="Horizontal"
+            Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="5">
+                <TextBlock Text=" Đội Hình : " FontSize="36"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Center"/>
+                <!-- Show Đội Hình-->
+                <StackPanel x:Name="Stack_DoiHinh" Orientation="Horizontal">
+                   
+                </StackPanel>
+            </StackPanel>
+
+            <!-- Bảng Chọn -->
+            <StackPanel
+            Orientation="Horizontal"
+            x:Name="StackShow"
+            VerticalAlignment="Center"
+             Grid.Row="2"
+                    Grid.RowSpan="2" Grid.Column="1"       Grid.ColumnSpan="5">
+            </StackPanel>
+
+        </Grid>
+    </Grid>
+</Window>

@@ -1,0 +1,53 @@
+﻿<Application x:Class="Example2311.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Example2311"
+             StartupUri="MainWin.xaml">
+    <Application.Resources>
+        <Style x:Key="OrangeButton" TargetType="Button">
+        
+            <Setter Property="Background" Value="Orange"/>
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="Template" >
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                      
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+           
+        </Style>
+        <Style TargetType="TextBlock" x:Key="CustomText">
+            <Setter Property="Foreground" Value="Gray"/>
+            <Setter Property="FontSize" Value="20"/>
+        </Style>
+        
+        <Style TargetType="Button" x:Key="CustomButtonChoose">
+            <Setter Property="Background" Value="Orange"/>
+            <Setter Property="Foreground" Value="Gray"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Border CornerRadius="20"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        
+        <Style x:Key="TextBlockStyle" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="White"/>
+        </Style>
+        <Style x:Key="BlueButton" TargetType="Button">
+        
+            <Setter Property="Background" Value="Blue"/>
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="Template" >
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border CornerRadius="20" Background="{TemplateBinding Background}" BorderThickness="1"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Application.Resources>
+</Application>

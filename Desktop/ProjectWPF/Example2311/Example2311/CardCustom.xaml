@@ -1,0 +1,170 @@
+﻿<UserControl x:Class="Example2311.CardCustom"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:lottieSharp="clr-namespace:LottieSharp;assembly=LottieSharp"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Example2311"
+             mc:Ignorable="d" 
+             Margin="10 0 10 0"
+             Background="White"
+             d:DesignHeight="260" d:DesignWidth="200">
+    <Grid 
+          >
+        <Grid Width="600" x:Name="Grid_Expend"  >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Button  Click="Back_StackDoiHinh">
+                <Button.Content>
+                    <Image Source="/img/icon_back.jpg"/>
+                </Button.Content>
+            </Button>
+            <!-- Hình ảnh -->
+            <Ellipse Width="200" Height="200" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" Grid.RowSpan="3">
+                <Ellipse.Fill>
+                    <ImageBrush>
+                        <ImageBrush.ImageSource>
+                            <BitmapImage  UriSource="/img/batman.png" />
+                        </ImageBrush.ImageSource>
+                    </ImageBrush>w
+
+                </Ellipse.Fill>
+               
+            </Ellipse>
+           
+            
+            <!-- Kỹ Năng-->
+            <Image Grid.Column="3"
+                   Grid.RowSpan="2"
+                   Grid.ColumnSpan="2"
+                   Stretch="Fill"
+                   Source="/img/skill1.png"
+                   />
+            <!--Thông Tin-->
+            <TextBlock 
+                Grid.Column="2"
+                TextAlignment="Justify"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                FontSize="12"
+                Text="Gây 30% sát thương lên kẻ địch khi trung bình lượng máu của đồng mình trên 500"
+                Grid.Row="2" Grid.RowSpan="2"
+                Grid.ColumnSpan="4"
+                       />
+        </Grid >
+        <Grid  x:Name="Grid_Body" Background="Transparent">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <!-- Bảng Chọn Kỹ Năng -->
+            <StackPanel x:Name="Stack_OptionSkill" HorizontalAlignment="Center" Orientation="Horizontal">
+                <Button Margin="0 0 5 0" >
+                    <Button.Content>
+                        <Image Source="/img/icon_plus.png"/>
+                    </Button.Content>
+                </Button>
+                <Button Margin="0 0 5 0">
+                    <Button.Content>
+                        <Image Source="/img/change_icon.png"/>
+                    </Button.Content>
+                </Button>
+
+                <Button>
+                    <Button.Content>
+                        <Image Source="/img/combine_icon.png"/>
+                    </Button.Content>
+                </Button>
+                
+            </StackPanel>
+
+
+                <!-- Tieu Đề -->
+            <StackPanel
+                
+            x:Name="Item_Header"
+            VerticalAlignment="Center" 
+                    HorizontalAlignment="Center"
+                    Orientation="Horizontal" Grid.Column="0" Grid.Row="0">
+               
+
+              
+                
+            </StackPanel>
+            <!-- Body -->
+            <StackPanel 
+                
+                x:Name="Item_Body"
+            Width="200"
+            HorizontalAlignment="Center"
+            Margin="0 5 0 0" Grid.Row="1" Orientation="Vertical">
+                <Grid>
+                    <Button  Click="UplevelItem">
+                        <Button.Content>
+                            <Image x:Name="img_item" Source="/img/spider.jpg" />
+                        </Button.Content>
+                    </Button>
+
+                    <lottieSharp:LottieAnimationView 
+                    Height="120"
+                    Speed="2.5"
+                     x:Name="img_body" 
+                DefaultCacheStrategy="None" 
+                  FileName="C:\Users\acer\Desktop\ProjectWPF\Example2311\Example2311\img\animation_fireworks.json"
+               
+                    Loop="False"
+                VerticalAlignment="Center" 
+                HorizontalAlignment="Center"
+                    />
+                </Grid>
+               
+                <TextBlock
+                    Width="200"
+                    Padding="20 0 0 0"
+                    Text="Người Nhện - Spider Man" 
+                        FontSize="12"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Center"/>
+                <TextBlock
+                    Width="200"
+                       Margin="0 5 0 0"
+                       Foreground="Blue"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center" 
+                       FontSize="16" 
+                 Padding="20 0 0 0"
+                       Text="Lực Chiến : 360"/>
+                <StackPanel Orientation="Horizontal">
+                    <Button Style="{StaticResource CustomButtonChoose}"  x:Name="But_Chon" Width="95" Margin="0 5 0 0" Height="40" Click="But_Chon_Click">
+                        <Button.Content>
+                            <TextBlock  
+                Style="{StaticResource CustomText}"
+                                Text="Choose"
+                                />
+                        </Button.Content>
+                    </Button>
+                    <Button  Style="{StaticResource BlueButton}"  Margin="5 5 0 0" Height="40"   Width="100" Click="But_Roll">
+                        <Button.Content>
+                            <TextBlock  Text="Roll" FontSize="20"/>
+                        </Button.Content>
+                    </Button>
+                </StackPanel>
+              
+            </StackPanel>
+        </Grid>
+      
+    </Grid>
+  
+</UserControl>

@@ -1,0 +1,49 @@
+﻿<UserControl x:Class="Example2311.Item_DoiHinh"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Example2311"
+             mc:Ignorable="d" 
+             d:DesignHeight="100" d:DesignWidth="100">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Button 
+            Click="Show_Option_Event"
+                Background="Transparent"
+                Grid.ColumnSpan="3"  Grid.RowSpan="3">
+            <Button.Content>
+                <Image x:Name="Img_ItemDoiHinh"   Source="/img/icon_spider.png"/>
+            </Button.Content>
+        </Button>
+      
+        <StackPanel
+            Visibility="Hidden"
+            x:Name="Stack_OptionItemDoiHinh"  Grid.Column="0" Orientation="Horizontal"  Grid.Row="2" >
+            <Button>
+                <Button.Content>
+                    <Image   Stretch="Fill" Source="/img/xingau.PNG"/>
+                </Button.Content>
+            </Button>
+            <Button>
+                <Button.Content>
+                    <Image   Stretch="Fill" Source="/img/up.jpg"/>
+                </Button.Content>
+            </Button>
+            <Button x:Name="delete_ItemDoiHinh">
+                <Button.Content>
+                    <Image   Stretch="Fill" Source="/img/delete.png"/>
+                </Button.Content>
+            </Button>
+        </StackPanel>
+    </Grid>
+</UserControl>
